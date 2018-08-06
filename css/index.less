@@ -1,0 +1,319 @@
+/* 导入微金所字头 */
+
+@import "wjsfont.less";
+* {
+    box-sizing: border-box;
+}
+
+.view {}
+
+
+/*默认字体颜色*/
+
+@fontColor: #808080;
+
+/*头部工具栏*/
+
+.topTool {
+    .row {
+        text-align: center;
+        color: @fontColor;
+        >div {
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #000;
+            border-right: none;
+            border-top: none;
+            a {
+                color: inherit;
+            }
+            .wjsPhone {
+                position: relative;
+                &:hover{
+                    >img{
+                        display: block;
+                    }
+                }
+                >img {
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    top: 20px;
+                    display: none;
+                }
+            }
+            /*免费注册*/
+            .btn {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/*导航*/
+
+.index_nav {
+    >.navbar-default {
+        /* 清除间距*/
+        margin-bottom: 0;
+    }
+    .container {
+        a {
+            height: 80px;
+            line-height: 80px;
+            padding-top: 0;
+            padding-bottom: 0;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid red;
+            }
+        }
+        .navbar-brand {
+            &:hover {
+                border: none;
+            }
+            span {
+                font-size: 70px;
+                padding: 5px;
+            }
+            .wjsfont-logo {
+                color: red;
+            }
+        }
+    }
+}
+
+
+/*轮播图*/
+
+.wjs_carousel {
+    .item {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+/*交易保障*/
+
+.exchange {
+    .row {
+        margin: 50px 0;
+        >div {
+            margin-top: 20px;
+            a {
+                color: @fontColor;
+                &:hover {
+                    color: red;
+                }
+                .media-left {
+                    font-size: 40px;
+                }
+                .media-body {
+                    h4 {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*排队*/
+
+.waiting {
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+    height: 80px;
+    padding: 30px 0;
+    font-size: 15px;
+    a {
+        color: red;
+        border-bottom: 1px dashed red;
+    }
+}
+
+
+/*微投资*/
+
+.buy {
+    .row {
+        a {
+            display: block;
+        }
+    }
+    .cart {
+        background-color: #f7f7f7;
+        color: @fontColor;
+        margin-top: 20px;
+        padding-right: 80px;
+        position: relative;
+        box-shadow: 1px 1px 1px 2px #ccc, -1px -1px 1px 2px #ccc;
+        .cart_content {
+            width: 100%;
+            border-right: 1px dashed #000;
+            padding: 0 10px;
+            h4 {
+                padding-top: 20px;
+                text-align: center;
+            }
+        }
+        .cart_rate {
+            width: 80px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                transform: translateX(-50%) translateY(-50%);
+                box-shadow: 0 2px 1px 0px #ccc;
+            }
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-50%) translateY(50%);
+                box-shadow: 0 -2px 1px 0px #ccc;
+            }
+            .rate_content {
+                margin: 60px 0;
+                text-align: center;
+            }
+        }
+    }
+    /* 红色的卡片 */
+    .cart_try {
+        background-color: red;
+        color: #fff;
+        .cart_content {
+            border-color: #fff;
+            position: relative;
+            .wjsfont {
+                position: absolute;
+                font-size: 40px;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    /* 带进度条*/
+    .cart_progress {
+        .cart_content {
+            .pull-left,
+            .pull-right {
+                width: 50%;
+            }
+        }
+        .cart_rate {
+            .baby>span {
+                &:first-child {
+                    border: 1px solid green;
+                    color: green;
+                }
+                &:last-child {
+                    border: 1px solid red;
+                    color: red;
+                }
+            }
+            p:nth-last-child(-n+2) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+/* 新闻 */
+
+.news {
+    /* 全部新闻*/
+    .all_news {
+        font-size: 30px;
+        border-bottom: 1px solid #000;
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateX(50%) translateY(50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+    }
+    /* 新闻选项 */
+    .news_tab {
+        position: relative;
+        /* 竖线 */
+        .line {
+            height: 400px;
+            border-right: 1px dashed #000;
+            position: absolute;
+            left: 74px;
+        }
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 60px;
+                a {
+                    display: block;
+                    height: 70px;
+                    width: 70px;
+                    background-color: #cccccc;
+                    border-radius: 50%;
+                    position: relative;
+                    &:hover,
+                    &:focus {
+                        background-color: red;
+                    }
+                    &:before {
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        font-size: 50px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            a {
+                font-size: 80px;
+                margin-left: 30px;
+                color: @fontColor;
+            }
+        }
+    }
+}

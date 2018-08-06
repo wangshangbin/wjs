@@ -1,0 +1,342 @@
+/* 导入微金所字头 */
+/* 导入 字体文件 */
+@font-face {
+  font-family: 'wjsfont';
+  src: url('../font/MiFie-Web-Font.eot');
+  src: url('../font/MiFie-Web-Font.eot?#iefix') format('embedded-opentype'), url('../font/MiFie-Web-Font.woff') format('woff'), url('font/MiFie-Web-Font.ttf') format('truetype'), url('../font/MiFie-Web-Font.svg') format('svg');
+}
+/* 定义 使用的class */
+.wjsfont {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'wjsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+.wjsfont-logo::before {
+  content: '\e920';
+}
+.wjsfont-name::before {
+  content: '\e921';
+}
+.wjsfont-e903::before {
+  content: '\e903';
+}
+.wjsfont-e901::before {
+  content: '\e901';
+}
+.wjsfont-e904::before {
+  content: '\e904';
+}
+.wjsfont-e905::before {
+  content: '\e905';
+}
+.wjsfont-e902::before {
+  content: '\e902';
+}
+/* 添加 产品列表的 文字样式 */
+.wjsfont-e915::before {
+  content: '\e915';
+}
+.wjsfont-new01::before {
+  content: "\e90e";
+}
+.wjsfont-new02::before {
+  content: "\e90f";
+}
+.wjsfont-new03::before {
+  content: "\e910";
+}
+.wjsfont-new04::before {
+  content: "\e911";
+}
+/* 网页 最下方的 合作单位 */
+.wjsfont-partner01::before {
+  content: "\e946";
+}
+.wjsfont-partner02::before {
+  content: "\e92f";
+}
+.wjsfont-partner03::before {
+  content: "\e92e";
+}
+.wjsfont-partner04::before {
+  content: "\e92a";
+}
+.wjsfont-partner05::before {
+  content: "\e929";
+}
+.wjsfont-partner06::before {
+  content: "\e931";
+}
+.wjsfont-partner07::before {
+  content: "\e92c";
+}
+.wjsfont-partner08::before {
+  content: "\e92b";
+}
+.wjsfont-partner09::before {
+  content: "\e92d";
+}
+* {
+  box-sizing: border-box;
+}
+/*默认字体颜色*/
+/*头部工具栏*/
+.topTool .row {
+  text-align: center;
+  color: #808080;
+}
+.topTool .row > div {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #000;
+  border-right: none;
+  border-top: none;
+  /*免费注册*/
+}
+.topTool .row > div a {
+  color: inherit;
+}
+.topTool .row > div .wjsPhone {
+  position: relative;
+}
+.topTool .row > div .wjsPhone:hover > img {
+  display: block;
+}
+.topTool .row > div .wjsPhone > img {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 20px;
+  display: none;
+}
+.topTool .row > div .btn {
+  color: #fff;
+}
+/*导航*/
+.index_nav > .navbar-default {
+  /* 清除间距*/
+  margin-bottom: 0;
+}
+.index_nav .container a {
+  height: 80px;
+  line-height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.index_nav .container a:hover,
+.index_nav .container a:focus {
+  border-bottom: 1px solid red;
+}
+.index_nav .container .navbar-brand:hover {
+  border: none;
+}
+.index_nav .container .navbar-brand span {
+  font-size: 70px;
+  padding: 5px;
+}
+.index_nav .container .navbar-brand .wjsfont-logo {
+  color: red;
+}
+/*轮播图*/
+.wjs_carousel .item img {
+  width: 100%;
+}
+/*交易保障*/
+.exchange .row {
+  margin: 50px 0;
+}
+.exchange .row > div {
+  margin-top: 20px;
+}
+.exchange .row > div a {
+  color: #808080;
+}
+.exchange .row > div a:hover {
+  color: red;
+}
+.exchange .row > div a .media-left {
+  font-size: 40px;
+}
+.exchange .row > div a .media-body h4 {
+  font-size: 22px;
+}
+/*排队*/
+.waiting {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  height: 80px;
+  padding: 30px 0;
+  font-size: 15px;
+}
+.waiting a {
+  color: red;
+  border-bottom: 1px dashed red;
+}
+/*微投资*/
+.buy {
+  /* 红色的卡片 */
+  /* 带进度条*/
+}
+.buy .row a {
+  display: block;
+}
+.buy .cart {
+  background-color: #f7f7f7;
+  color: #808080;
+  margin-top: 20px;
+  padding-right: 80px;
+  position: relative;
+  box-shadow: 1px 1px 1px 2px #cccccc, -1px -1px 1px 2px #cccccc;
+}
+.buy .cart .cart_content {
+  width: 100%;
+  border-right: 1px dashed #000;
+  padding: 0 10px;
+}
+.buy .cart .cart_content h4 {
+  padding-top: 20px;
+  text-align: center;
+}
+.buy .cart .cart_rate {
+  width: 80px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.buy .cart .cart_rate:before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 2px 1px 0px #ccc;
+}
+.buy .cart .cart_rate:after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(50%);
+  box-shadow: 0 -2px 1px 0px #cccccc;
+}
+.buy .cart .cart_rate .rate_content {
+  margin: 60px 0;
+  text-align: center;
+}
+.buy .cart_try {
+  background-color: red;
+  color: #fff;
+}
+.buy .cart_try .cart_content {
+  border-color: #fff;
+  position: relative;
+}
+.buy .cart_try .cart_content .wjsfont {
+  position: absolute;
+  font-size: 40px;
+  left: 0;
+  top: 0;
+}
+.buy .cart_progress .cart_content .pull-left,
+.buy .cart_progress .cart_content .pull-right {
+  width: 50%;
+}
+.buy .cart_progress .cart_rate .baby > span:first-child {
+  border: 1px solid green;
+  color: green;
+}
+.buy .cart_progress .cart_rate .baby > span:last-child {
+  border: 1px solid red;
+  color: red;
+}
+.buy .cart_progress .cart_rate p:nth-last-child(-n+2) {
+  font-size: 20px;
+}
+/* 新闻 */
+.news {
+  /* 全部新闻*/
+  /* 新闻选项 */
+}
+.news .all_news {
+  font-size: 30px;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+.news .all_news:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(50%) translateY(50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.news .news_tab {
+  position: relative;
+  /* 竖线 */
+}
+.news .news_tab .line {
+  height: 400px;
+  border-right: 1px dashed #000;
+  position: absolute;
+  left: 74px;
+}
+.news .news_tab ul {
+  list-style: none;
+}
+.news .news_tab ul li {
+  margin-bottom: 60px;
+}
+.news .news_tab ul li a {
+  display: block;
+  height: 70px;
+  width: 70px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  position: relative;
+}
+.news .news_tab ul li a:hover,
+.news .news_tab ul li a:focus {
+  background-color: red;
+}
+.news .news_tab ul li a:before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 50px;
+  color: #fff;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  float: left;
+}
+footer ul li a {
+  font-size: 80px;
+  margin-left: 30px;
+  color: #808080;
+}
+/*# sourceMappingURL=index.css.map */
